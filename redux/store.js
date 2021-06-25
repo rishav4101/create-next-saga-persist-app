@@ -39,4 +39,5 @@ export const makeStore = (initialState = exampleInitialState) => {
   return store;
 };
 
-export const wrapper = createWrapper(makeStore);
+const wrapper = createWrapper(makeStore);
+export { wrapper };

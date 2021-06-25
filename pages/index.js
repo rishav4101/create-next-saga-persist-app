@@ -2,14 +2,15 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import React from "react";
+import { ACTION_TYPES } from "../redux/actions/countriesAction";
 
 export default function Home() {
   const dispatch = useDispatch();
-  const fetchedCountries = useSelector((state) => state.countriesReducer.countries);
+  const fetchedCountries = useSelector((state) => state.countries.countriesList);
 
   React.useEffect(() => {
     dispatch({
-      type: "FETCH_COUNTRIES",
+      type: ACTION_TYPES.FETCH_COUNTRIES,
     });
     console.log(fetchedCountries);
   }, []);
@@ -24,7 +25,7 @@ export default function Home() {
 
       <main className={styles.main}>
         {fetchedCountries?.map((c) => (
-          <h1>{c.name}</h1>
+          <h1 key={c.name}>{c.name}</h1>
         ))}
       </main>
     </div>
