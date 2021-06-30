@@ -3,13 +3,14 @@ import React from "react";
 import App from "next/app";
 import { wrapper } from "../redux/store";
 import { PersistGate } from "redux-persist/integration/react";
-import {ReactReduxContext} from 'react-redux'
+import { ReactReduxContext } from "react-redux";
 
 class MyApp extends App {
   constructor(props) {
     super(props);
   }
 
+  // Getting Initial props.
   static getInitialProps = async ({ Component, ctx }) => {
     const pageProps = {
       ...(Component.getInitialProps
@@ -25,15 +26,16 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-
       <ReactReduxContext.Consumer>
-      {({ store }) => (
-          <PersistGate persistor={store.__PERSISTOR} loading={<div>Loading</div>}>
-              <Component {...pageProps} />
+        {({ store }) => (
+          <PersistGate
+            persistor={store.__PERSISTOR}
+            loading={<div>Loading</div>}
+          >
+            <Component {...pageProps} />
           </PersistGate>
-      )}
-    </ReactReduxContext.Consumer>
-       
+        )}
+      </ReactReduxContext.Consumer>
     );
   }
 }

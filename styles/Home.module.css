@@ -1,1 +1,6 @@
 /************** INDEX.JS(HOME) CSS ONLY ***************/
+.main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}

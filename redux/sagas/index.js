@@ -1,4 +1,5 @@
-/*------- THE MAIN SAGA COMPONENT -------*/
+/*------- THIS IS THE MAIN SAGA COMPONENT -------*/
+
 import { all } from "redux-saga/effects";
 
 /* IMPORT ALL SAGA WATCHERS */
