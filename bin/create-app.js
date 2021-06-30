@@ -103,10 +103,10 @@ function buildPackageJson(packageJson, folderName) {
   } = packageJson;
 
   Object.assign(newPackage, {
-    name: folderName,
-    version: '1.0.0',
-    description: '',
-    author: '',
+    "name": folderName,
+    "version": '1.0.0',
+    "description": '',
+    "author": '',
     "scripts": {
         "dev": "next dev",
         "build": "next build",

@@ -1,7 +1,7 @@
 {
   "name": "next-saga-persist-boilerplate",
   "description":"A ready-to-use utility boilerplate to get your project started right away with just one single command. It sets up redux-saga and redux-persist with NextJs and makes it production ready. If you are a NextJs lover and need Redux for your next project this is definately the right boilerplate to start with.",
-  "version": "0.1.2",
+  "version": "1.0.1",
   "author": "Rishav Raj Kumar",
   "bin": {
     "next-saga-persist-boilerplate": "./bin/create-app.js"
