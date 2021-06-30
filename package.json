@@ -1,6 +1,6 @@
 {
   "name": "next-saga-persist-boilerplate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Rishav Raj Kumar",
   "bin": {
     "next-saga-persist-boilerplate": "./bin/create-app.js"
