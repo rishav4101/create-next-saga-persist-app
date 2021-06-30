@@ -1,34 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# A NextJs boilerplate with redux-saga and redux-persist.
+[![NPM](https://nodei.co/npm/next-saga-persist-boilerplate.png)](https://nodei.co/npm/next-saga-persist-boilerplate/)
 
-## Getting Started
+A *ready-to-use* utility boilerplate to get your project started right away with just one single command. It sets up *redux-saga* and *redux-persist* with *NextJs* and makes it production ready. If you are a NextJs lover and need Redux for your next project this is definately the right *boilerplate* to start with.
 
-First, run the development server:
+## Features :
+<img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" height="40px"/> &nbsp;
+<img src="https://raw.githubusercontent.com/LukeBrandonFarrell/open-source-images/master/redux-persist-machine/redux-persist-machine-logo.png" height="45px"/> &nbsp;
+<img src="https://redux-saga.js.org/img/Redux-Saga-Logo-Landscape.png" height="35px"/>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* NextJs ```v11```
+* React ```v17```
+* React-Redux ```v7```
+* Redux-Saga ```v1```
+* Redux-Persist ```v6```
+* Basic folder structure Ready-to-go.
+* An example [Countries API](https://restcountries.eu/rest/v2/) fetched.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Let's get started!
+* Choose a folder to intialize your project - <br/>
+    ```npx next-saga-persist-boilerplate your-app-name && cd your-app-name```
+* Start a development server on [http://localhost:3000](http://localhost:3000) - <br/>
+    ```npm run dev```
+* Build for production - <br/>
+    ```npm run build```
+* Linting - <br/>
+    ```npm run lint```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Requirements :
+* NodeJs
+* NPM or Yarn package manager
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## FAQ
+### What is a boilerplate ?
+A boilerplate is a project with generic, maintainable and reusable code, files or content that is intended to be used as a starting point for creating new projects blazing fast without wasting time in setting up the basics each time.
+### Why Redux-Saga ?
+Redux Saga is a middleware library that allows a Redux store to interact with resources outside of itself in an asynchronous way, including making of HTTP requests to external services, accessing the browser storage, or executing any I/O operations. These operations are known as side effects. Redux-Saga helps us to organize and manage these side effects in easier way.
 
-## Learn More
+## Contributing
+Pull requests and stars shall always be welcomed. For bugs and feature requests, [please create an issue](https://github.com/rishav4101/next-saga-persist-boilerplate/issues).
 
-To learn more about Next.js, take a look at the following resources:
+## Author
+[Rishav Raj Kumar](https://github.com/rishav4101)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+Copyright © 2021, Rishav Raj Kumar. Released under the [MIT license](https://github.com/rishav4101/next-saga-persist-boilerplate/blob/main/LICENSE).
