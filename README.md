@@ -1,5 +1,8 @@
 # A NextJs boilerplate with redux-saga and redux-persist.
-[![NPM](https://nodei.co/npm/next-saga-persist-boilerplate.png)](https://nodei.co/npm/next-saga-persist-boilerplate/)
+![GitHub (Pre-)Release Date](https://img.shields.io/github/last-commit/rishav4101/create-next-saga-persist-app?style=for-the-badge)
+![npm](https://img.shields.io/npm/v/create-next-saga-persist-app?style=for-the-badge)
+![NPM](https://img.shields.io/npm/l/create-next-saga-persist-app?style=for-the-badge)
+
 
 A *ready-to-use* utility boilerplate to get your project started right away with just one single command. It sets up *redux-saga* and *redux-persist* with *NextJs* and makes it production ready. If you are a NextJs lover and need Redux for your next project this is definately the right *boilerplate* to start with.
 
@@ -18,24 +21,91 @@ A *ready-to-use* utility boilerplate to get your project started right away with
 * An example [Countries API](https://restcountries.eu/rest/v2/) fetched.
 
 ## Let's get started!
-* Choose a folder to intialize your project - <br/>
-    ```npx create-next-saga-persist-app your-app-name && cd your-app-name```
-* Start a development server on [http://localhost:3000](http://localhost:3000) - <br/>
-    ```npm run dev```
-* Build for production - <br/>
-    ```npm run build```
-* Linting - <br/>
-    ```npm run lint```
+* Choose a folder to create your project and create using following methods:
+### npx 
+```
+npx create-next-saga-persist-app your-app-name
+```
+### npm
+```
+npm init next-saga-persist-app your-app-name
+```
+<p align="center">OR</p>
+
+```
+npm create next-saga-persist-app your-app-name
+```
+It will create a directory called ```your-app-name``` inside the current folder.
+Inside that directory, it will generate the initial project structure and install the transitive dependencies:
+```
+your-app-name
+├── README.md
+├── node_modules
+├── package-lock.json
+├── package.json
+├── next.config.js
+├── .gitignore
+├── .env.example
+├── .eslintrc
+├── public
+│   ├── favicon.ico
+│   └── vercel.svg
+├── pages
+│   ├── _app.js
+│   └── index.js
+├── redux
+│   ├── actions
+│   |   └── countriesAction.js
+│   ├── reducers
+|   |   ├── countries.js
+│   |   └── index.js
+│   ├── sagas
+|   |   ├── countriesSaga.js
+│   |   └── index.js
+│   └── store.js
+└── styles
+    ├── globals.css
+    └── Home.module.css
+```
+
+Once the installation is done, you can open your project folder:
+```
+cd your-app-name
+```
+
+* Start a development server on [http://localhost:3000](http://localhost:3000):
+
+```
+npm run dev
+```
+* Build for production:
+
+```
+npm run build
+```
+* Start a server in production mode(after build) on [http://localhost:3000](http://localhost:3000):
+
+```
+npm start
+```
+* Linting: 
+
+```
+npm run lint
+```
 
 ## Requirements :
+Recommended updated versions of 
 * NodeJs
-* NPM or Yarn package manager
+* NPM package manager
 
 ## FAQ
 ### What is a boilerplate ?
 A boilerplate is a project with generic, maintainable and reusable code, files or content that is intended to be used as a starting point for creating new projects blazing fast without wasting time in setting up the basics each time.
 ### Why Redux-Saga ?
 Redux Saga is a middleware library that allows a Redux store to interact with resources outside of itself in an asynchronous way, including making of HTTP requests to external services, accessing the browser storage, or executing any I/O operations. These operations are known as side effects. Redux-Saga helps us to organize and manage these side effects in easier way.
+
+#### This package uses [restcountries api](https://github.com/apilayer/restcountries) for fetching an example data.
 
 ## Contributing
 Pull requests and stars shall always be welcomed. For bugs and feature requests, [please create an issue](https://github.com/rishav4101/create-next-saga-persist-app/issues).

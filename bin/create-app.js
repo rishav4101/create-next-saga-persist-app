@@ -48,13 +48,13 @@ try {
 
 async function setup() {
   try {
-    console.log('\x1b[33m', 'Downloading next-saga-persist-app...Just a bit more of wait...', '\x1b[0m');
+    console.log('\x1b[33m', 'Downloading next-saga-persist-app...Just a minute...', '\x1b[0m');
     await runCmd(`git clone --depth 1 ${repo} ${folderName}`);
 
     process.chdir(appPath);
 
     console.log('\x1b[34m', 'Installing dependencies...', '\x1b[0m');
-    
+
     fs.unlinkSync(path.join(appPath, 'package.json'));
     buildPackageJson(folderName);
 
