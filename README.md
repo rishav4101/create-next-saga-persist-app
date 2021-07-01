@@ -19,7 +19,7 @@ A *ready-to-use* utility boilerplate to get your project started right away with
 
 ## Let's get started!
 * Choose a folder to intialize your project - <br/>
-    ```npx next-saga-persist-boilerplate your-app-name && cd your-app-name```
+    ```npx create-next-saga-persist-app your-app-name && cd your-app-name```
 * Start a development server on [http://localhost:3000](http://localhost:3000) - <br/>
     ```npm run dev```
 * Build for production - <br/>
@@ -38,10 +38,10 @@ A boilerplate is a project with generic, maintainable and reusable code, files o
 Redux Saga is a middleware library that allows a Redux store to interact with resources outside of itself in an asynchronous way, including making of HTTP requests to external services, accessing the browser storage, or executing any I/O operations. These operations are known as side effects. Redux-Saga helps us to organize and manage these side effects in easier way.
 
 ## Contributing
-Pull requests and stars shall always be welcomed. For bugs and feature requests, [please create an issue](https://github.com/rishav4101/next-saga-persist-boilerplate/issues).
+Pull requests and stars shall always be welcomed. For bugs and feature requests, [please create an issue](https://github.com/rishav4101/create-next-saga-persist-app/issues).
 
 ## Author
 [Rishav Raj Kumar](https://github.com/rishav4101)
 
 ## License
-Copyright © 2021, Rishav Raj Kumar. Released under the [MIT license](https://github.com/rishav4101/next-saga-persist-boilerplate/blob/main/LICENSE).
+Copyright © 2021, Rishav Raj Kumar. Released under the [MIT license](https://github.com/rishav4101/create-next-saga-persist-app/blob/main/LICENSE).

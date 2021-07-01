@@ -4,7 +4,6 @@
 
 const path = require('path');
 const util = require('util');
-const packageJson = require('../package.json');
 const fs = require('fs');
 const exec = util.promisify(require('child_process').exec);
 
@@ -23,14 +22,14 @@ async function runCmd(command) {
 if (process.argv.length < 3) {
   console.log('\x1b[31m', 'Hey! Looks like you missed something! Please provide a name to your application.');
   console.log('For example:');
-  console.log('npx next-saga-persist-boilerplate my-app', '\x1b[0m');
+  console.log('npx create-next-saga-persist-app my-app', '\x1b[0m');
   process.exit(1);
 }
 
 const ownPath = process.cwd();
 const folderName = process.argv[2];
 const appPath = path.join(ownPath, folderName);
-const repo = 'https://github.com/rishav4101/next-saga-persist-boilerplate.git';
+const repo = 'https://github.com/rishav4101/create-next-saga-persist-app.git';
 
 try {
   fs.mkdirSync(appPath);
@@ -49,12 +48,16 @@ try {
 
 async function setup() {
   try {
-    console.log('\x1b[33m', 'Downloading next-saga-persist-boilerplate...Just a bit more of wait...', '\x1b[0m');
+    console.log('\x1b[33m', 'Downloading next-saga-persist-app...Just a bit more of wait...', '\x1b[0m');
     await runCmd(`git clone --depth 1 ${repo} ${folderName}`);
 
     process.chdir(appPath);
 
     console.log('\x1b[34m', 'Installing dependencies...', '\x1b[0m');
+    
+    fs.unlinkSync(path.join(appPath, 'package.json'));
+    buildPackageJson(folderName);
+
     await runCmd('npm install');
     console.log();
 
@@ -62,9 +65,7 @@ async function setup() {
 
     fs.unlinkSync(path.join(appPath, 'LICENSE'));
     fs.rmdirSync(path.join(appPath, 'bin'), { recursive: true });
-    fs.unlinkSync(path.join(appPath, 'package.json'));
-
-    buildPackageJson(packageJson, folderName);
+    
 
     console.log(
       '\x1b[32m',
@@ -91,18 +92,9 @@ async function setup() {
 
 setup();
 
-function buildPackageJson(packageJson, folderName) {
-  const {
-    bin,
-    keywords,
-    license,
-    homepage,
-    repository,
-    bugs,
-    ...newPackage
-  } = packageJson;
+function buildPackageJson(folderName) {
 
-  Object.assign(newPackage, {
+  const newPackage = {
     "name": folderName,
     "version": '1.0.0',
     "description": '',
@@ -122,13 +114,12 @@ function buildPackageJson(packageJson, folderName) {
         "react-redux": "^7.2.4",
         "redux-persist": "^6.0.0",
         "redux-saga": "^1.1.3",
-        "rimraf": "^3.0.2"
       },
       "devDependencies": {
         "eslint": "7.29.0",
         "eslint-config-next": "11.0.1"
       }
-  });
+  };
 
   fs.writeFileSync(
     `${process.cwd()}/package.json`,
