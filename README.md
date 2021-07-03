@@ -94,6 +94,18 @@ npm start
 npm run lint
 ```
 
+### Environment Setup
+Create a local ```.env.local``` or ```.env``` file with configurations stated in ```.env.example``` for local environment setup. Read more on Environment setup in NextJs [here](https://nextjs.org/docs/basic-features/environment-variables).
+
+### Note 
+```index.js``` opts out of static optimization by default. please use ```getStaticProps``` to use static optimization feature of nextJs.
+
+## References :
+* [NextJs](https://nextjs.org/docs/getting-started)
+* [Redux Saga](https://redux-saga.js.org/docs/introduction/GettingStarted)
+* [Redux Persist](https://github.com/rt2zz/redux-persist)
+* [ReactJs](https://reactjs.org/docs/getting-started.html)
+
 ## Requirements :
 Recommended updated versions of 
 * NodeJs

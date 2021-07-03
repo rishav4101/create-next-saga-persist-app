@@ -1,7 +1,7 @@
 {
   "name": "create-next-saga-persist-app",
   "description": "A ready-to-use utility boilerplate to get your project started right away with just one single command. It sets up redux-saga and redux-persist with NextJs and makes it production ready. If you are a NextJs lover and need Redux for your next project this is definately the right boilerplate to start with.",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "author": "Rishav Raj Kumar",
   "bin": {
     "create-next-saga-persist-app": "./bin/create-app.js"
@@ -41,7 +41,7 @@
     "rimraf": "^3.0.2"
   },
   "devDependencies": {
-    "eslint": "7.29.0",
+    "eslint": "7.30.0",
     "eslint-config-next": "11.0.1"
   }
 }
